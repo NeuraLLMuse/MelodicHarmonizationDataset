@@ -17,7 +17,7 @@ tokenizer = CSGridMLMTokenizer(
 names = ['HOOK', 'JAZZ', 'NOTT', 'WIKI']
 for n in names:
     for tv in ['_TRAIN', '_VAL']:
-        for tr in ['_CA', '_12']:
+        for tr in ['_CA']: #['_CA', '_12']:
             print(f'Processing {n} - {tr} - {tv}.')
             folder = os.getenv(n + tr + tv)
             _ = CSGridMLMDataset(folder, tokenizer, frontloading=True, name_suffix='Q4_L80_bar_PC')

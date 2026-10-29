@@ -1,0 +1,85 @@
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_1.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_112.mid: Could not decode key with 9 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_114.mid: Track index 1 is out of range for file /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_114.mid.
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_139.mid: Could not decode key with 11 flats and mode 1
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_160.mid: Could not decode key with 9 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_171.mid: Could not decode key with 11 flats and mode 1
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_2.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_22.mid: Could not decode key with 13 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_230.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_241.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_280.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_302.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_31.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_33.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_356.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_361.mid: Could not decode key with 9 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_37.mid: Could not decode key with 9 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_395.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_46.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_466.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_505.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_train/real_524.mid: Could not decode key with 12 flats and mode 1
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/jazz_val/real_293.mid: Could not decode key with 12 flats and mode 1
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/nott_train/jigs110.mid: MIDI file has a largest tick of 15523201, it is likely corrupt
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Adam Fine - Laplace.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/B Goodman, C Christian - Air Mail Special.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/BC Jean, Toby Gad - If I Were A Boy.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Barry Mann, Cynthia Weil, Jerry Lieber, Mike Stroller - On Broadway.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Benny Andersson & Bjorn Ulvaeus - The Winner Takes it All.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Benny Golson - Stablemates.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Billy Strayhorn - A Flower Is A Lovesome Thing.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Billy Strayhorn - Chelsea Bridge.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Billy Strayhorn - Lush Life.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Billy Strayhorn - Upper Manhattan Medical Group.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Burt Bacharach, Hal David - A House Is Not A Home1.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Carole King, Toni Stern - It_s Going To Take Some Time.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Charles Mingus - Goodbye Pork Pie Hat.mid: Could not decode key with 9 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Chris Daughtry - Home.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Colbert - Licorice.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Coldplay - God Put a Smile Upon Your Face.mid: Could not decode key with 9 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/D. Pearson - Jeannine solo.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/David Krueger, Per Magnussen, Richard Page, Simon Cowell - Footprints in the Sand.mid: Could not decode key with 9 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Duke Ellington - The Single Petal Of A Rose.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Eric Carmen, Sergei Rachmaninov - All By Myself.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Frank Myers, Gary Baker - I Swear.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Jerome Kern, Otto Harbach - Smoke Gets in Your Eyes.mid: Could not decode key with 8 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Jim Steinman - Total Eclipse Of The Heart.mid: Could not decode key with 8 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Johann Strauss - Blue Danube by  Jon Anderson.mid: MIDI file has a largest tick of 15427441, it is likely corrupt
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/John Barry, Tim Rice - All Time High.mid: Could not decode key with 10 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Johnny Green - Body and Soul .mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Josef Zawinul - Midnight Mood.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/LOU CHRISTIE & TWYLA - PAINT AMERICA LOVE.mid: Could not decode key with 13 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Lee Morgan - Speedball.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Leon Rene, Leon Rene  - When The Swallows Come Back To Capistrano .mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Little, Shay, Sizemore - I Like Pie I Like Cake.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/M.G. Schneider - Dankie.mid: Could not decode key with 8 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Malavoi, Ralph Thamar - Apre la pli.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Marchetti, Unknown - Fascination.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Mosie Lister 1958 - _Til the Storm Passes By.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Nickolas Ashford, Valerie Simpson - Ain_t No Mountain High Enough.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Oscar Pettiford - Tricotism.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Paul McCartney - When I_m Sixty-Four.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Peter Callander, Geoff Stephens - Daddy, Don_t You Walk So fast.mid: Could not decode key with 8 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/R. Kelly - You are not alone.mid: Could not decode key with 10 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Robert Miles - Children.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Robin Gibb, Barry Gibb - Woman In Love.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Stephen Sondheim - A Little Night Music.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Stevie Wonder - Don_t You Worry _bout a Thing.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Tchaikovsky - Piano Concerto No.1 in Bb Minor, Op. 23.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Thelonious Monk - Ugly Beauty.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Thomas O. Chisholm & William J. Kirkpatrick 1897 - O To Be Like Thee.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Traditional - Hollandse Medley.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Unknown - Gevangen in mijn Hart.mid: Could not decode key with 11 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Unknown - IK BEN BLIJ DAT IK JE NIET VERGETEN BEN.mid: Could not decode key with 11 sharps and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Unknown - PAPPIE LOOP TOCH NIET ZO SNEL.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Unknown - Zeemansliedjes-potpourri.mid: MIDI file has a largest tick of 11430721, it is likely corrupt
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/Wayne Walker & Lucky Moeller 1957 - Are You Sincere.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_train/lee konitz - subconscious lee (Bb).mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/Dizzy Gillespie - Woody n_ You.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/Horace Silver - Doodlin_ .mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/Horace Silver - Strollin_.mid: Could not decode key with 12 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/James Horner, Will Jennings - My Heart Will Go On.mid: Could not decode key with 8 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/John Bettis and Michael Clark - Slow Hand (Transcribed).mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/Thelonious Monk - Little Rootie Tootie.mid: Could not decode key with 11 flats and mode 0
+Skipping /media/maindisk/data/midi_mel_harm_all/train_val_CA/wiki_val/Willie Nelson - Crazy1.mid: Could not decode key with 8 sharps and mode 0
