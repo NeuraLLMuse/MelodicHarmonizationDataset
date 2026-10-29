@@ -12,6 +12,6 @@ for n in names:
         df = compute_folder_metrics(
             input_root,
             recursive=True,
-            include_errors=True,
+            include_errors=False,
         )
         df.to_csv(input_root + '_df.csv')

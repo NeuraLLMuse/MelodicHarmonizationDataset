@@ -10,6 +10,7 @@ import pretty_midi
 from music21 import converter, meter
 
 from tqdm import tqdm
+from pathlib import Path
 
 def compute_normalized_token_entropy(logits, target_ids, pad_token_id=None):
     """
@@ -783,29 +784,37 @@ def compute_folder_metrics(
 
     metric_names = ["CHE", "CC", "CTD", "HRHE_i", "HRC_i", "CBS", "CTnCTR", "PCS", "MCTD"]
     rows = []
-    for midi_path in tqdm(midi_paths):
-        base = {
-            "filename": os.path.basename(midi_path),
-            "filepath": midi_path,
-        }
-        try:
-            base.update(compute_piece_metrics(
-                midi_path,
-                chord_track_index=chord_track_index,
-                melody_track_index=melody_track_index,
-                grouping_threshold=grouping_threshold,
-            ))
-            if include_errors:
-                base["error"] = None
-            rows.append(base)
-        except Exception as exc:
-            message = f"Skipping {midi_path}: {exc}"
-            if include_errors:
-                base.update({metric: np.nan for metric in metric_names})
-                base["error"] = str(exc)
+
+    # Initialize the error log for this run.
+    data_dir = Path(__file__).resolve().parent / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    error_log_path = data_dir / "metrics_errors.txt"
+
+    # Process files with a progress bar
+    with error_log_path.open("w", encoding="utf-8") as error_log:
+        for midi_path in tqdm(midi_paths):
+            base = {
+                "filename": os.path.basename(midi_path),
+                "filepath": midi_path,
+            }
+            try:
+                base.update(compute_piece_metrics(
+                    midi_path,
+                    chord_track_index=chord_track_index,
+                    melody_track_index=melody_track_index,
+                    grouping_threshold=grouping_threshold,
+                ))
+                if include_errors:
+                    base["error"] = None
                 rows.append(base)
-            else:
+            except Exception as exc:
+                message = f"Skipping {midi_path}: {exc}"
                 print(message)
+                error_log.write(message + "\n")
+                if include_errors:
+                    base.update({metric: np.nan for metric in metric_names})
+                    base["error"] = str(exc)
+                    rows.append(base)
 
     columns = ["filename", "filepath"] + metric_names
     if include_errors:

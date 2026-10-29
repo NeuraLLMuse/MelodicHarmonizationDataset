@@ -76,12 +76,20 @@ def transpose_to_c_major_a_minor_bulk(input_root, output_root):
                 output_path = os.path.join(output_dir, file)
                 midi_files.append((input_path, output_path))
     
+    # Initialize the error log for this run.
+    data_dir = Path(__file__).resolve().parent / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    error_log_path = data_dir / "transposition_errors.txt"
+
     # Process files with a progress bar
-    for input_path, output_path in tqdm(midi_files, desc="Processing files", unit="file"):
-        try:
-            transpose_to_c_major_a_minor_single(input_path, output_path)
-        except Exception as e:
-            print(f"Error processing {input_path}: {e}")
+    with error_log_path.open("w", encoding="utf-8") as error_log:
+        for input_path, output_path in tqdm(midi_files, desc="Processing files", unit="file"):
+            try:
+                transpose_to_c_major_a_minor_single(input_path, output_path)
+            except Exception as e:
+                error_message = f"Error processing {input_path}: {e}"
+                print(error_message)
+                error_log.write(error_message + "\n")
 # end transpose_to_c_major_a_minor_bulk
 
 def transpose_to_c_major_a_minor_single(input_path, output_path):
@@ -89,8 +97,8 @@ def transpose_to_c_major_a_minor_single(input_path, output_path):
     Transposes a single MIDI file to C major or A minor if necessary, and saves the result.
 
     Args:
-        input_path (str): Path to the input MusicXML file.
-        output_path (str): Path to save the transposed MusicXML file.
+        input_path (str): Path to the input MIDI file.
+        output_path (str): Path to save the transposed MIDI file.
     """
     # Load the MIDI file
     score = converter.parse(input_path)
@@ -103,6 +111,8 @@ def transpose_to_c_major_a_minor_single(input_path, output_path):
     if (original_key.tonic.name == 'C' and original_key.mode == 'major') or \
        (original_key.tonic.name == 'A' and original_key.mode == 'minor'):
         # print(f"The piece is already in C major or A minor. Skipping {input_path}.")
+        # just copy file
+        shutil.copyfile(input_path, output_path)
         return
     
     # Determine the target key (C major or A minor)
@@ -116,14 +126,12 @@ def transpose_to_c_major_a_minor_single(input_path, output_path):
 
     # for harmony in transposed_score.recurse().getElementsByClass('Harmony'):
     #     print(f"Chord: {harmony.figure}, Bass: {harmony.bass()}")
-
     for harmony in transposed_score.recurse().getElementsByClass('Harmony'):
         if '/' in harmony.figure:  # Check for slash chords
             root, bass = harmony.figure.split('/')
             harmony.figure = f"{root}/{bass}"
         elif harmony.bass():  # Ensure inversion info is retained
             harmony.figure = f"{harmony.figure}/{harmony.bass().name}"
-    
     # Save the transposed score to the output file
     # transposed_score.write('musicxml', fp=output_path)
     transposed_score.write('midi', fp=output_path)
@@ -144,45 +152,55 @@ def transpose_to_all_keys(in_folder, out_folder):
     # Find all MusicXML files
     midi_files = [file for ext in ["*.mid", "*.midi", "*.xml", "*.mxl", "*.musicxml"] for file in input_root.rglob(ext)]
 
-    # Setup progress bar
-    with tqdm(total=len(midi_files) * (len(transposition_intervals) - 1), desc="Processing Files") as pbar:
-        for input_path in midi_files:
-            rel_path = input_path.relative_to(input_root)  # Preserve subfolder structure
-            
-            try:
-                score = converter.parse(input_path)  # Load the MIDI file
-            except Exception as e:
-                print(f"Error loading {input_path}: {e}")
-                continue  # Skip to the next file
-            # Ensure output directory exists
-            output_root.mkdir(parents=True, exist_ok=True)
-            
-            midi_extensions = {".mid", ".midi"}
-            musicxml_extensions = {".xml", ".mxl", ".musicxml"}
-            extension = input_path.suffix.lower()
-            if extension in midi_extensions:
-                output_ext = '.mid'
-                write_type = 'midi'
-            elif extension in musicxml_extensions:
-                output_ext = '.xml'
-                write_type = 'xml'
-            else:
-                print('ERROR: unknown extension')
-            
-            # Process transpositions
-            for interval in transposition_intervals:
+    # Initialize the error log for this run.
+    data_dir = Path(__file__).resolve().parent / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    error_log_path = data_dir / "transposition_12_errors.txt"
+
+    with error_log_path.open("w", encoding="utf-8") as error_log:
+        # Setup progress bar
+        with tqdm(total=len(midi_files) * (len(transposition_intervals) - 1), desc="Processing Files") as pbar:
+            for input_path in midi_files:
+                rel_path = input_path.relative_to(input_root)  # Preserve subfolder structure
+                
                 try:
-                    # Transpose and create output path
-                    transposed_score = score.transpose(interval)
-                    output_file = output_root / rel_path.with_stem(f"{input_path.stem}_tr_{interval}")
-                    output_file = output_file.with_suffix(output_ext)
-                    
-                    # Create necessary subdirectories
-                    output_file.parent.mkdir(parents=True, exist_ok=True)
-                    
-                    # Write to file
-                    transposed_score.write(write_type, output_file)
-                    pbar.update(1)  # Update progress bar
-                    
+                    score = converter.parse(input_path)  # Load the MIDI file
                 except Exception as e:
-                    print(f"Error transposing {input_path} by {interval}: {e}")
+                    message = f"Error loading {input_path}: {e}"
+                    print(message)
+                    error_log.write(message + "\n")
+                    continue  # Skip to the next file
+                # Ensure output directory exists
+                output_root.mkdir(parents=True, exist_ok=True)
+                
+                midi_extensions = {".mid", ".midi"}
+                musicxml_extensions = {".xml", ".mxl", ".musicxml"}
+                extension = input_path.suffix.lower()
+                if extension in midi_extensions:
+                    output_ext = '.mid'
+                    write_type = 'midi'
+                elif extension in musicxml_extensions:
+                    output_ext = '.xml'
+                    write_type = 'xml'
+                else:
+                    print('ERROR: unknown extension')
+                
+                # Process transpositions
+                for interval in transposition_intervals:
+                    try:
+                        # Transpose and create output path
+                        transposed_score = score.transpose(interval)
+                        output_file = output_root / rel_path.with_stem(f"{input_path.stem}_tr_{interval}")
+                        output_file = output_file.with_suffix(output_ext)
+                        
+                        # Create necessary subdirectories
+                        output_file.parent.mkdir(parents=True, exist_ok=True)
+                        
+                        # Write to file
+                        transposed_score.write(write_type, output_file)
+                        pbar.update(1)  # Update progress bar
+                        
+                    except Exception as e:
+                        message = f"Error transposing {input_path}: {e}"
+                        print(message)
+                        error_log.write(message + "\n")
