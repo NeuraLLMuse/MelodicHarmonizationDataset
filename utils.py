@@ -82,7 +82,7 @@ def transpose_to_c_major_a_minor_bulk(input_root, output_root):
     error_log_path = data_dir / "transposition_errors.txt"
 
     # Process files with a progress bar
-    with error_log_path.open("w", encoding="utf-8") as error_log:
+    with error_log_path.open("a", encoding="utf-8") as error_log:
         for input_path, output_path in tqdm(midi_files, desc="Processing files", unit="file"):
             try:
                 transpose_to_c_major_a_minor_single(input_path, output_path)
@@ -157,7 +157,7 @@ def transpose_to_all_keys(in_folder, out_folder):
     data_dir.mkdir(parents=True, exist_ok=True)
     error_log_path = data_dir / "transposition_12_errors.txt"
 
-    with error_log_path.open("w", encoding="utf-8") as error_log:
+    with error_log_path.open("a", encoding="utf-8") as error_log:
         # Setup progress bar
         with tqdm(total=len(midi_files) * (len(transposition_intervals) - 1), desc="Processing Files") as pbar:
             for input_path in midi_files:

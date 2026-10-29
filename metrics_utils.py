@@ -791,7 +791,7 @@ def compute_folder_metrics(
     error_log_path = data_dir / "metrics_errors.txt"
 
     # Process files with a progress bar
-    with error_log_path.open("w", encoding="utf-8") as error_log:
+    with error_log_path.open("a", encoding="utf-8") as error_log:
         for midi_path in tqdm(midi_paths):
             base = {
                 "filename": os.path.basename(midi_path),
