@@ -36,8 +36,14 @@ def split_dataset(input_root, train_root, test_root, train_ratio=0.9):
     
     for relative_path in test_files:
         copy_file_to_output(input_root, test_root, relative_path)
-    
-    print(f"Dataset split completed: {len(train_files)} files in train, {len(test_files)} files in test.")
+
+    # measure result in the actual folders
+    total_train_files = sum(len(files) for _, _, files in os.walk(train_root))
+    total_test_files = sum(len(files) for _, _, files in os.walk(test_root))
+    after_split_sum = total_train_files + total_test_files
+    print(f"Dataset split completed: {total_train_files} files in train, {total_test_files} files in test.")
+    print(f'Total before split: {total_files} - sum after split: {after_split_sum}')
+    assert after_split_sum == total_files, 'Split sum not same size as initial folder'
 # end split_dataset
 
 def copy_file_to_output(input_root, output_root, relative_path):
